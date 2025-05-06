@@ -1,0 +1,195 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #011640; /* Azul escuro principal */
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-weight: 600;
+    font-size: 24px;
+    color: #cce4ff; /* Cor clara para o nome da empresa */
+    text-transform: uppercase; /* Deixa o nome da empresa em maiúsculas */
+    letter-spacing: 2px; /* Aumenta o espaçamento entre as letras para dar mais destaque */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Links do menu com animação */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Animação de sublinhado ao passar o mouse */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #cce4ff;
+    transition: width 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+nav ul li a:hover {
+    color: #cce4ff;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    background: url('fundo-hero.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    background-color: #033170; /* Azul intermediário */
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #fff;
+    color: #011640;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #cce4ff;
+}
+
+/* Produtos */
+.produtos {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.produtos h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #011640;
+}
+
+.produtos-lista {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.produto-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.produto-item:hover {
+    transform: translateY(-5px);
+}
+
+.produto-item img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.produto-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #033170;
+}
+
+.produto-item p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.produto-item button {
+    background-color: #011640;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.produto-item button:hover {
+    background-color: #033170;
+}
+
+/* Rodapé */
+footer {
+    background-color: #011640;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .produtos-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+}
